@@ -14,6 +14,7 @@ body {
 
 #app {
   max-width: 800px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 20px;
   background-color: #3d5a80;
@@ -31,7 +32,14 @@ h1 i {
   color: #ee6c4d;
 }
 
-/* Main */
+/* Main  LISTA TODO*/
+section {
+  padding: 10px 10px 1px;
+  color: #293241;
+  background-color: #e0fbfc;
+  border-radius: 10px;
+
+}
 .new-todo {
   text-align: center;
 }
@@ -43,10 +51,15 @@ h1 i {
   font-size: 16px;
   border: 0;
   color: #293241;
-  background-color:  #ee6c4d;
+  background-color: rgba(238,108,77, .8);
   border-radius: 25px;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .6);
   cursor: pointer;
+  transition: background-color .4s;
+}
+
+.btn:hover {
+  background-color: #ee6c4d;
 }
 
 .add-todo {
@@ -56,11 +69,44 @@ h1 i {
   margin-bottom: 30px;
   padding: 0 15px;
   font-size: 16px;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(224,251,252, .8);
   border: 0;
   border-radius: 25px;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .4);
   outline: none;
+  transition: background .4s;
+  cursor: pointer;
+}
+
+.add-todo:hover {
+  background-color: #e0fbfc;
+}
+
+.todos li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0, .2);
+}
+
+.todos li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.todos li i {
+  font-size: 20px;
+  transition: color .4s;
+  cursor: pointer;
+}
+.todos li i:hover {
+    color: #ee6c4d;
+}
+
+/* show/hidden class */
+span {
+  font-weight: bold;
 }
 
 .show-text {
@@ -69,16 +115,4 @@ h1 i {
 
 .hidden-text {
   display: none;
-}
-
-.todos li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255,255,255, .2);
-}
-
-.todos li:last-child {
-  border-bottom: 0;
 }

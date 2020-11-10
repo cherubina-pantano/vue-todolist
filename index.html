@@ -18,22 +18,25 @@
       </header>
       <main>
         <div class="new-todo">
-          <input type="text" name="todo" class="add-todo" v-model="todo" placeholder="Inserisci nuovo Todo">
+          <input type="text" name="todo" class="add-todo" v-model="todo"
+            @keyup.enter="addNewTodo"  placeholder="Inserisci nuovo Todo">
           <button type="button" name="button" class="btn"
           @click="addNewTodo">
               Aggiungi</button>
         </div>
+        <section>
+          <ul class="todos"> 
+            <li v-for="(todo, index) in todos">
+              {{ todo.text}}
+              <i  class="far fa-times-circle"
+              @click="deleteTodo(index)"> </i>
+            </li>
+          </ul>
+          <span :class="{'show-text': todos.length == 0, 'hidden-text': !todos.length == 0}">Nessun Todo registrato</span>
 
-        <ul class="todos">
-          <li v-for="(todo, index) in todos">
-            <!-- <span  class="hidden-text">Nessun Todo da fare</span> -->
+        </section>
 
-            {{ todo.text}}
-            <i  class="far fa-times-circle"
-            @click="deleteTodo(index)"> </i>
-          </li> 
 
-        </ul>
       </main>
 
     </div>
