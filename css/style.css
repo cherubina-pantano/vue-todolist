@@ -63,6 +63,14 @@ h1 i {
   outline: none;
 }
 
+.show-text {
+  display: block;
+}
+
+.hidden-text {
+  display: none;
+}
+
 .todos li {
   display: flex;
   justify-content: space-between;

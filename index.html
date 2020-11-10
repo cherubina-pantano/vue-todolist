@@ -18,17 +18,20 @@
       </header>
       <main>
         <div class="new-todo">
-          <input type="text" class="add-todo" placeholder="Inserisci nuovo Todo">
-          <button type="button" name="button" class="btn">Aggiungi</button>
+          <input type="text" name="todo" class="add-todo" v-model="todo" placeholder="Inserisci nuovo Todo">
+          <button type="button" name="button" class="btn"
+          @click="addNewTodo">
+              Aggiungi</button>
         </div>
 
-
-
         <ul class="todos">
-          <li v-for="todo in todos">
+          <li v-for="(todo, index) in todos">
+            <!-- <span  class="hidden-text">Nessun Todo da fare</span> -->
+
             {{ todo.text}}
-            <i class="far fa-times-circle"></i>
-          </li>
+            <i  class="far fa-times-circle"
+            @click="deleteTodo(index)"> </i>
+          </li> 
 
         </ul>
       </main>
