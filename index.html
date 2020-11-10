@@ -4,10 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body> 
+  <body>
+    <div id="app">
+      <header>
+        <h1>
+          <i class="fas fa-bookmark"></i>
+          My Todo List
+        </h1>
+      </header>
+      <main>
+        <div class="new-todo">
+          <input type="text" class="add-todo" placeholder="Inserisci nuovo Todo">
+          <button type="button" name="button" class="btn">Aggiungi</button>
+        </div>
+
+
+
+        <ul class="todos">
+          <li v-for="todo in todos">
+            {{ todo.text}}
+            <i class="far fa-times-circle"></i>
+          </li>
+
+        </ul>
+      </main>
+
+    </div>
 
 
 

@@ -1,0 +1,76 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #98c1d9;
+  background-color: #293241;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #3d5a80;
+}
+
+/* Header */
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 i {
+  padding-right: 10px;
+  color: #ee6c4d;
+}
+
+/* Main */
+.new-todo {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 28px;
+  font-size: 16px;
+  border: 0;
+  color: #293241;
+  background-color:  #ee6c4d;
+  border-radius: 25px;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .6);
+  cursor: pointer;
+}
+
+.add-todo {
+  width: 80%;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, .8);
+  border: 0;
+  border-radius: 25px;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .4);
+  outline: none;
+}
+
+.todos li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255, .2);
+}
+
+.todos li:last-child {
+  border-bottom: 0;
+}
