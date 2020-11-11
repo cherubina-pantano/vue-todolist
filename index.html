@@ -20,12 +20,17 @@
         <div class="new-todo">
           <input type="text" name="todo" class="add-todo" v-model="todo"
             @keyup.enter="addNewTodo"  placeholder="Inserisci nuovo Todo">
-          <button type="button" name="button" class="btn"
-          @click="addNewTodo">
-              Aggiungi</button>
+
+          <button type="button" name="button" class="btn btn-text"
+            @click="addNewTodo"> Aggiungi
+           </button>
+          <button type="button" name="button" class="btn btn-icon " @click="addNewTodo">
+            <i class="fas fa-plus"></i>
+          </button>
+
         </div>
         <section>
-          <ul class="todos"> 
+          <ul class="todos">
             <li v-for="(todo, index) in todos">
               {{ todo.text}}
               <i  class="far fa-times-circle"
@@ -33,10 +38,7 @@
             </li>
           </ul>
           <span :class="{'show-text': todos.length == 0, 'hidden-text': !todos.length == 0}">Nessun Todo registrato</span>
-
         </section>
-
-
       </main>
 
     </div>

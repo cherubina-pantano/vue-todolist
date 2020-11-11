@@ -8,19 +8,19 @@ const app = new Vue({
       {text: 'Fare il bucato'},
       {text: 'Andare in banca'},
     ],
-
   },
 
   methods: {
     addNewTodo() {
-      this.todos.push({text: this.todo});
-      this.todo = '';
+      if(this.todo.trim() !== '') {
+        this.todos.push({text: this.todo});
+        this.todo = '';
+      }
+
     },
 
     deleteTodo(index) {
       this.todos.splice(index, 1);
     },
-
   }
-
 });

@@ -45,20 +45,37 @@ section {
 }
 
 .btn {
-  display: inline-block;
   text-align: center;
-  padding: 12px 28px;
-  font-size: 16px;
   border: 0;
-  color: #293241;
-  background-color: rgba(238,108,77, .8);
-  border-radius: 25px;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .6);
   cursor: pointer;
+}
+
+.btn-text {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 16px;
+  color: #293241;
+  border-radius: 25px;
+  background-color: rgba(238,108,77, .8);
   transition: background-color .4s;
 }
 
-.btn:hover {
+.btn-icon {
+  display: none;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background: #ee6c4d;
+}
+
+.btn-icon i {
+  color: #293241;
+  font-size: 16px;
+}
+
+.btn-text:hover {
   background-color: #ee6c4d;
 }
 
@@ -75,7 +92,6 @@ section {
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .4);
   outline: none;
   transition: background .4s;
-  cursor: pointer;
 }
 
 .add-todo:hover {
@@ -97,7 +113,7 @@ section {
 
 .todos li i {
   font-size: 20px;
-  transition: color .4s;
+  transition: color .2s;
   cursor: pointer;
 }
 .todos li i:hover {
@@ -105,7 +121,7 @@ section {
 }
 
 /* show/hidden class */
-span {
+section > span {
   font-weight: bold;
 }
 
@@ -115,4 +131,22 @@ span {
 
 .hidden-text {
   display: none;
+}
+
+
+
+/* Media Query */
+@media screen and (max-width: 649px) {
+  h1 i {
+    padding-right: 3px;
+  }
+
+  .btn-text {
+    display: none;
+  }
+
+  .btn-icon {
+    display: inline-block;
+  }
+
 }
